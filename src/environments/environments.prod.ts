@@ -1,5 +1,5 @@
 
 
 export const environments = {
-    baseUrl: 'https://wiki-heroes.com/api'
+    baseUrl: 'http://localhost:3000'
 }
