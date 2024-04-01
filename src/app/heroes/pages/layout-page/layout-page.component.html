@@ -60,16 +60,17 @@
             
     </mat-sidenav>
 
-    <mat-toolbar class="normal-size">
+    <mat-toolbar class="closed-toolbar">
         <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
 
-        <span class="spacer"></span>
-
-        <button class="btn-opacity-0 btn-border">
-            Cerrar Sesión
-        </button>
+        <div>
+            <button class="btn-opacity-0 btn-border">
+                Cerrar Sesión
+            </button>
+            <img src="../../../../assets/avatar.webp" alt="avatar">
+        </div>
     </mat-toolbar>
 
     <div>

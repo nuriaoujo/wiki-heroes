@@ -4,6 +4,24 @@ mat-toolbar {
     color: #F0F3FF;
 }
 
+.closed-toolbar {
+    font-family: "Arya", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.closed-toolbar img {
+    width: 45px;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.closed-toolbar div {
+    display: flex;
+    flex-direction: row;
+}
+
 .open-toolbar {
     padding-top: 0.7rem;
     height: 10rem;
