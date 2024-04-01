@@ -65,6 +65,13 @@ button.btn .mat-icon {
     background-color: #1f174b;
 }
 
+.btn-border {
+    border: 1px solid rgba(255, 255, 255, 0.413);
+}
+.btn-border:hover {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
 .account-link {
     text-decoration: none;
     color: #211951;
