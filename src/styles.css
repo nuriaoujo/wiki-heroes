@@ -112,3 +112,25 @@ button.btn .mat-icon {
     z-index: -1;
     filter: blur(1rem);
 }
+
+/* Scroll Bar */
+/* width */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #F0F3FF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #836FFF;
+    border-radius: 7px;
+}
+    
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #211951;
+}

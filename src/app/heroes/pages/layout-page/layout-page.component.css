@@ -5,10 +5,12 @@ mat-toolbar {
 }
 
 .closed-toolbar {
+    position: fixed;
     font-family: "Arya", sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 2;
 }
 
 .closed-toolbar img {
