@@ -1,8 +1,27 @@
+/* Mat Toolbar */
 mat-toolbar {
     background-color: #211951;
     color: #F0F3FF;
 }
 
+.open-toolbar {
+    padding-top: 0.7rem;
+    height: 10rem;
+    background-color: #19123bc0;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.open-toolbar div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Mat Sidenav */
 mat-sidenav {
     background-color: #211951;
 }
@@ -22,10 +41,39 @@ mat-sidenav img {
     margin-right: 0.5rem;
 }
 
+/* Mat Sidenav Structure */
+.menu-bar-floating{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+}
+
+/* Mat List Item */
+.list-item div {
+    margin-top: 1rem;
+    display: flex;
+    align-items: normal;
+}
+.list-item:hover p { color: #15F5BA; }
+
+.list-item mat-icon { color: #836FFF; }
+.list-item p { color: #836FFF; margin-left: 2.5rem; }
+
+
+/* Text & Text Sidebar Elements */
+.title-font {
+    font-family: "Arya", sans-serif;
+    font-size: 1.75rem;
+    margin: 2rem 0;
+}
+
 .text-lg {
     margin: 16px;
-    color: #F0F3FF;
+    color: #826fffaa;
 }
+
+small { color: #836FFF; display: flex; justify-content: center; }
 
 .separator {
     width: 100%;
@@ -34,22 +82,32 @@ mat-sidenav img {
     background-color: #19123bc0;
 }
 
-/* Mat List Item */
+.material-icons {
+    font-family: 'Material Icons Outlined';
+}
 
-mat-list-item div {
-    margin-top: 1rem;
+
+/* Social Media Icons */
+.icons {
+    color: #836FFF;
+    font-size: 1.2rem;
+    margin: 3rem 0.70rem 1rem;
+    cursor: pointer;
+
     display: flex;
-    align-items: normal;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-mat-list-item:hover p {
-    color: #f0f3ffd8;
+.icons i{ padding: 10px; border-radius: 50%; }
+
+.icons i:hover {
+    color: #15F5BA;
+    background-color: #1b144489;
 }
 
-mat-list-item mat-icon {
-    color: #836FFF;
+.icons i:active {
+    color: #15f5b9cc;
+    background-color: #1b1444;
 }
-mat-list-item p {
-    color: #836FFF;
-    margin-left: 2.5rem;
-}
+

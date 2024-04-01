@@ -1,37 +1,63 @@
 <mat-sidenav-container fullscreen>
 
-    <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '300px' }">
-        <mat-toolbar class="smaller-size">
-            <img src="../../../../assets/logo.png" alt="">
-            <span><strong>Super</strong>pedia</span>
-            <span class="spacer"></span>
+    <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '320px' }">
+        <mat-toolbar class="smaller-size open-toolbar">
+            
             <button mat-icon-button (click)="sidenav.toggle()">
                 <mat-icon>navigate_before</mat-icon>
             </button>
+
+            <div>
+                <img src="../../../../assets/logo.png" alt="">
+                <div>
+                    <span class="title-font">
+                        <strong>Super</strong>pedia
+                        <small>Tus héroes online</small>
+                    </span>
+                    <span class="spacer"></span>
+                </div>
+            </div>
+            
         </mat-toolbar>
         
         <div class="separator"></div>
-        <span class="text-lg font-medium">Menú</span>
+        <span class="text-lg font-medium">GENERAL</span>
         
-        <mat-nav-list>
-            <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
-                <div>
-                    <mat-icon>{{ item.icon }}</mat-icon>
-                    <p>{{ item.label }}</p>
+        <mat-nav-list class="menu-bar-floating">
+            <div>
+                <mat-list-item class="list-item" *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
+                    <div>
+                        <mat-icon>{{ item.icon }}</mat-icon>
+                        <p>{{ item.label }}</p>
+                    </div>
+                </mat-list-item>
+            </div>
+            
+            <div>
+                <div class="separator"></div>
+                <a mat-list-item class="list-item" href="https://nuriaoujo.github.io/my-portfolio/" target="_blank">
+                    <div>
+                        <mat-icon class="material-icons">alternate_email</mat-icon>
+                        <p>Contacto</p>
+                    </div>
+                </a>
+                <mat-list-item class="list-item">
+                    <div>
+                        <mat-icon>logout</mat-icon>
+                        <p>Cerrar Sesión</p>
+                    </div>
+                </mat-list-item>
+                <div class="icons">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-twitch"></i>
                 </div>
-            </mat-list-item>
+            </div>
         </mat-nav-list>
-
-        <div>
-            <div class="separator"></div>
-            <mat-list-item>
-                <div>
-                    <mat-icon>logout</mat-icon>
-                    <p>Cerrar Sesión</p>
-                </div>
-            </mat-list-item>
-        </div>
-
+        
+        <small>Copyright &copy;2024 All rights reserved </small>
+            
     </mat-sidenav>
 
     <mat-toolbar class="normal-size">
