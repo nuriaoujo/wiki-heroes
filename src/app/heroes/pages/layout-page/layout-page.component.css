@@ -1,0 +1,55 @@
+mat-toolbar {
+    background-color: #211951;
+    color: #F0F3FF;
+}
+
+mat-sidenav {
+    background-color: #211951;
+}
+
+mat-sidenav span:first-child {
+    font-family: "Arya", sans-serif;
+}
+
+mat-sidenav span:first-child strong{
+    font-weight: 900;
+    color: #F0F3FF;
+}
+
+mat-sidenav img {
+    width: 50px;
+    margin-top: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.text-lg {
+    margin: 16px;
+    color: #F0F3FF;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 1rem;
+    background-color: #19123bc0;
+}
+
+/* Mat List Item */
+
+mat-list-item div {
+    margin-top: 1rem;
+    display: flex;
+    align-items: normal;
+}
+
+mat-list-item:hover p {
+    color: #f0f3ffd8;
+}
+
+mat-list-item mat-icon {
+    color: #836FFF;
+}
+mat-list-item p {
+    color: #836FFF;
+    margin-left: 2.5rem;
+}

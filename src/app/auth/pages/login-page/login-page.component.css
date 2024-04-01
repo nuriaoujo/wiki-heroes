@@ -1,0 +1,33 @@
+mat-card {
+    margin-top: 8rem;
+    padding: 30px;
+    max-width: 600px;
+}
+
+mat-card-content {
+    width: 350px;
+}
+
+.title-layout {
+    color: #F0F3FF;
+    text-align: center;
+    width: 100%;
+    padding-top: 3.5rem;
+    font-size: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Arya", sans-serif;
+    /* text-transform: uppercase; */
+    filter: drop-shadow(4px 4px 4px #0000004b);
+    font-weight: 100;
+}
+
+.title-layout span {
+    font-weight: 900;
+    font-size: 1.9rem;
+} 
+
+.title-layout img {
+    height: 3.3rem;
+}

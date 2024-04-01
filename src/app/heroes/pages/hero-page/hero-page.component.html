@@ -6,7 +6,10 @@
         </mat-grid-tile>
     </mat-grid-list>
 </ng-template>
-<div *ngIf="hero; else divLoading" class="grid mt-2 p-2">
+<div *ngIf="hero; else divLoading">
+
+    <img [src]="hero | heroImage" [alt]="hero.superhero" id="background-hero-details">
+    
     <mat-card class="col-12 sm:col-6">
         <mat-card-header>
             <mat-card-title>Información</mat-card-title>
@@ -25,5 +28,4 @@
         </mat-card-content>
         <img [src]="hero | heroImage" [alt]="hero.superhero" mat-card-image>
     </mat-card>
-
 </div>

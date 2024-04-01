@@ -1,36 +1,52 @@
 <mat-sidenav-container fullscreen>
 
-    <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
-        <mat-toolbar>
-            <span>Menú</span>
+    <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '300px' }">
+        <mat-toolbar class="smaller-size">
+            <img src="../../../../assets/logo.png" alt="">
+            <span><strong>Super</strong>pedia</span>
             <span class="spacer"></span>
             <button mat-icon-button (click)="sidenav.toggle()">
                 <mat-icon>navigate_before</mat-icon>
             </button>
         </mat-toolbar>
-
+        
+        <div class="separator"></div>
+        <span class="text-lg font-medium">Menú</span>
+        
         <mat-nav-list>
             <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
-                <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-                {{ item.label }}
+                <div>
+                    <mat-icon>{{ item.icon }}</mat-icon>
+                    <p>{{ item.label }}</p>
+                </div>
             </mat-list-item>
         </mat-nav-list>
 
+        <div>
+            <div class="separator"></div>
+            <mat-list-item>
+                <div>
+                    <mat-icon>logout</mat-icon>
+                    <p>Cerrar Sesión</p>
+                </div>
+            </mat-list-item>
+        </div>
+
     </mat-sidenav>
 
-    <mat-toolbar color="primary">
+    <mat-toolbar class="normal-size">
         <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
 
         <span class="spacer"></span>
 
-        <button mat-button>
+        <button class="btn-opacity-0">
             Cerrar Sesión
         </button>
     </mat-toolbar>
 
-    <div class="container p-2">
+    <div>
         <router-outlet></router-outlet>
     </div>
 
