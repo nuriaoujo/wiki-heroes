@@ -10,7 +10,7 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
