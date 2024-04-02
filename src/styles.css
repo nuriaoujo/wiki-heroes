@@ -8,45 +8,42 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     flex: 1 1 auto;
 }
 
+/* btn colors */
 .btn {    
     border-radius: 4px;
     box-shadow: 1px 2px 5px #00000033;
     border: none;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
     padding: 9px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
     cursor: pointer;
-
-    transition: all 0.5s;
 }
 
 button.btn .mat-icon {
     margin-right: 8px;
 }
 
-.btn:hover {
-    background-color: #211951de;
-}
+/* Btn Default */
+.btn-dark { background-color: #211951; color: #F0F3FF; transition: all 0.5s; }
+.btn-light { background-color: #ffffff; color: #1f1f1f; transition: all 0.5s; }
+.btn-main { background-color: #15F5BA; color: #1f1f1f; transition: all 0.5s; }
+.btn-secondary { background-color: #836FFF; color: #F0F3FF; transition: all 0.5s; }
 
-/* btn colors */
-.btn-dark {
-    background-color: #211951;
-    color: #F0F3FF;
-}
-.btn-light {
-    background-color: #F0F3FF;
-    color: #1f1f1f;
-}
-.btn-main {
-    background-color: #15F5BA;
-    color: #F0F3FF;
-}
-.btn-secondary {
-    background-color: #836FFF;
-    color: #F0F3FF;
-}
+.btn-dark:hover { background-color: #171138; }
+.btn-light:hover { background-color: #ebecf1; }
+.btn-main:hover { background-color: #19d4a2; }
+.btn-secondary:hover { background-color: #594ab7; }
+
+.btn-dark:active { background: radial-gradient(circle, rgb(55, 42, 125) 0%, rgba(23,17,56,1) 49%); background: rgb(44, 33, 106) }
+.btn-light:active { background: radial-gradient(circle, rgba(240,243,255,1) 0%, rgba(224,226,237,1) 49%); background-color: rgba(224,226,237,1); }
+.btn-main:active { background: radial-gradient(circle, rgba(21,245,186,1) 0%, rgba(25,212,162,1) 49%); background-color: rgba(25,212,162,1); }
+.btn-secondary:active { background: radial-gradient(circle, rgba(111,99,193,1) 0%, rgba(89,74,183,1) 49%); background-color: #594ab7; }
+
 .btn-opacity-0 {
     background-color: #826fff00;
     color: #F0F3FF;
@@ -123,7 +120,7 @@ button.btn .mat-icon {
 ::-webkit-scrollbar-track {
     background: #F0F3FF;
 }
-
+                         
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #836FFF;
