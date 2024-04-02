@@ -57,9 +57,8 @@ mat-sidenav span:first-child strong{
 }
 
 mat-sidenav img {
-    width: 50px;
-    margin-top: 0.3rem;
-    margin-right: 0.5rem;
+    width: 51px;
+    margin: 0.3rem 0.5rem 1rem 0;
 }
 
 /* Mat Sidenav Structure */
@@ -83,9 +82,14 @@ mat-sidenav img {
 
 
 /* Text & Text Sidebar Elements */
+.font-general {
+    font-family: "VT323", sans-serif;
+    font-size: 1.6rem !important;
+}
+
 .title-font {
-    font-family: "Arya", sans-serif;
-    font-size: 1.75rem;
+    font-family: "VT323", sans-serif !important;
+    font-size: 2rem;
     margin: 2rem 0;
 }
 

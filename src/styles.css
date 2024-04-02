@@ -84,6 +84,11 @@ button.btn .mat-icon {
     height: 100%;
 }
 
+.background {
+    background: rgb(33,25,81);
+    background: linear-gradient(295deg, rgba(33,25,81,1) 76%, rgb(51, 38, 126) 100%);   
+}
+
 #background-video {
     width: 100vw;
     height: 100vh;
@@ -118,12 +123,13 @@ button.btn .mat-icon {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #F0F3FF;
+    background: #211951;
 }
                          
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #836FFF;
+    border-radius: 9px;
 }
     
 /* Handle on hover */

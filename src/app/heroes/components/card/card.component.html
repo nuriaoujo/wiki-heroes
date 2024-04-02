@@ -1,11 +1,10 @@
-<mat-card>
+<mat-card class="card-border">
 
     <mat-card-header>
         <mat-card-title>{{ hero.superhero }}</mat-card-title>
         <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
     </mat-card-header>
 
-    <!-- TODO: Imagen -->
     <img mat-card-image [src]="hero | heroImage" [alt]="hero.superhero">
 
     <mat-card-content class="mt-2">
@@ -14,8 +13,8 @@
         <p>
             <strong>Primera aparición</strong> {{ hero.first_appearance }}
             <br>
-            <mat-chip-row *ngFor="let name of hero.characters.split(',') | slice:0:3" class="mt-2 mr-2">
-                <mat-chip>
+            <mat-chip-row *ngFor="let name of hero.characters.split(',') | slice:0:3" class="mt-2 mr-2 chip-style">
+                <mat-chip class="chip-style">
                     {{ name }}
                 </mat-chip>
             </mat-chip-row>
@@ -26,14 +25,14 @@
     <mat-divider class="mt-2"></mat-divider>
 
     <mat-card-actions>
-        <button mat-button mat-raised color="primary" [routerLink]="['/heroes/edit', hero.id]">
+        <button class="btn btn-dark mb-1" [routerLink]="['/heroes/edit', hero.id]">
             <mat-icon>edit</mat-icon>
             Editar
         </button>
 
         <span class="spacer"></span>
 
-        <button mat-button mat-raised [routerLink]="['/heroes', hero.id]">
+        <button class="btn btn-main mb-1" [routerLink]="['/heroes', hero.id]">
             <mat-icon>more_horiz</mat-icon>
             Más
         </button>

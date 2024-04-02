@@ -1,0 +1,18 @@
+.card-border {
+    border: 2px solid #15F5BA;
+    background-color: #826fff25;
+    color: #F0F3FF;
+}
+
+.chip-style {
+    background-color: #836FFF !important;
+}
+
+img {
+    border: 2px solid #15F5BA;
+    margin: 1rem 0;
+    height: 350px;
+    border-radius: 2%;
+    object-fit: cover;
+    object-position: 0% 0%;
+}

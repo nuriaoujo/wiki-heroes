@@ -1,3 +1,4 @@
+/* Login & Register Page */
 mat-card {
     margin-top: 10rem;
     padding: 30px;
@@ -8,35 +9,34 @@ mat-card-content {
     width: 350px;
 }
 
+/* Layout Page */
 .title-layout {
     color: #F0F3FF;
     text-align: center;
     width: 100%;
     padding-top: 3.5rem;
-    font-size: 1.9rem;
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Arya", sans-serif;
-    /* text-transform: uppercase; */
+    font-family: "VT323", sans-serif;
     filter: drop-shadow(4px 4px 4px #0000004b);
     font-weight: 100;
+    cursor: default;
 }
 
 .title-layout p {
-    line-height: 1;
+    text-transform: uppercase;
+    line-height: 0.6;
     text-align: justify;
-    margin: 0 1rem;
+    margin: 0 0.4rem;
 }
 .title-layout p small {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     opacity: 0.8;
 }
 
-.title-layout span {
-    font-weight: 900;
-    font-size: 2rem;
-}
+.title-layout p small span { text-transform: lowercase; }
 
 .title-layout img {
     height: 4.5rem;
