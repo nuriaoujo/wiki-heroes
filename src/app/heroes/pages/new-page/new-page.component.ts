@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { Hero, Publisher } from '../../interfaces/hero.interface';
 import { HeroesService } from '../../services/heroes.service';
-import { switchMap } from 'rxjs';
+import { filter, switchMap, tap } from 'rxjs';
 
 import { ConfirmDialogComponent } from '../../components/confirm-dialog/confirm-dialog.component';
 
@@ -21,7 +21,7 @@ export class NewPageComponent implements OnInit {
   public heroForm = new FormGroup({
     id: new FormControl<string>(''),
     superhero: new FormControl<string>('', { nonNullable: true }),
-    publisher: new FormControl<Publisher>( Publisher.DCComics ),
+    publisher: new FormControl<Publisher>(Publisher.DCComics),
     alter_ego: new FormControl<string>(''),
     first_appearance: new FormControl<string>(''),
     characters: new FormControl<string>(''),
@@ -39,7 +39,7 @@ export class NewPageComponent implements OnInit {
     private router: Router,
     private snakbar: MatSnackBar,
     private dialog: MatDialog
-    ) {}
+  ) { }
 
   get currentHero(): Hero {
     const hero = this.heroForm.value as Hero;
@@ -47,39 +47,39 @@ export class NewPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-      if ( !this.router.url.includes('edit')) return;
+    if (!this.router.url.includes('edit')) return;
 
-      this.activatedRoute.params
-        .pipe(
-          switchMap( ({ id }) => this.heroesService.getHeroById(id) ),
-        ).subscribe(hero =>{
-          if(!hero) return this.router.navigateByUrl('/');
+    this.activatedRoute.params
+      .pipe(
+        switchMap(({ id }) => this.heroesService.getHeroById(id)),
+      ).subscribe(hero => {
+        if (!hero) return this.router.navigateByUrl('/');
 
-          this.heroForm.reset(hero);
-          return;
-        });
+        this.heroForm.reset(hero);
+        return;
+      });
   }
 
-  onSubmit():void {
+  onSubmit(): void {
     if (this.heroForm.invalid) return;
 
     if (this.currentHero.id) {
       this.heroesService.updateHero(this.currentHero)
-        .subscribe( hero => {
+        .subscribe(hero => {
           this.showSnakbar(`${hero.superhero} creado!`);
         });
-        return;
+      return;
     }
 
     this.heroesService.addHero(this.currentHero)
-      .subscribe( hero => {
+      .subscribe(hero => {
         this.router.navigate(['/heroes/edit', hero.id]);
         this.showSnakbar(`${hero.superhero} actualizado!`);
       });
-      return;
+    return;
   }
 
-  showSnakbar( message: string ): void {
+  showSnakbar(message: string): void {
     this.snakbar.open(message, 'ok', {
       duration: 2500,
     });
@@ -92,9 +92,15 @@ export class NewPageComponent implements OnInit {
       data: this.heroForm.value
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log( {result} );
-    });
+    dialogRef.afterClosed()
+      .pipe(
+        filter((result: boolean) => result),
+        switchMap( () => this.heroesService.deleteHeroById(this.currentHero.id)),
+        filter( (wasDeleted: boolean) => wasDeleted),
+      )
+      .subscribe(result => {
+        this.router.navigate(['/heroes']);
+      });
   }
 
 }
