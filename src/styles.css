@@ -127,7 +127,6 @@ button.btn .mat-icon {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #836FFF;
-    border-radius: 7px;
 }
     
 /* Handle on hover */
