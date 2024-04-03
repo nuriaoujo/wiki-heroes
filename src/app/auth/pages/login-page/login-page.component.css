@@ -27,13 +27,12 @@ mat-card-content {
 
 .title-layout p {
     text-transform: uppercase;
-    line-height: 0.6;
+    line-height: 0.8;
     text-align: justify;
     margin: 0 0.4rem;
 }
 .title-layout p small {
     font-size: 1.8rem;
-    opacity: 0.8;
 }
 
 .title-layout p small span { text-transform: lowercase; }
