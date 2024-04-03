@@ -1,31 +1,27 @@
-<ng-template #divLoading>
-    <mat-grid-list cols="3">
-        <mat-grid-tile></mat-grid-tile>
-        <mat-grid-tile>
-            <mat-spinner></mat-spinner>
-        </mat-grid-tile>
-    </mat-grid-list>
-</ng-template>
-<div *ngIf="hero; else divLoading">
+<div class="background-2">
 
-    <img [src]="hero | heroImage" [alt]="hero.superhero" id="background-hero-details">
+    <ng-template #divLoading>
+        <div class="loader"></div>
+    </ng-template>
+    <div *ngIf="hero; else divLoading">
+        <mat-card class="col-12 sm:col-6">
+            <mat-card-header>
+                <mat-card-title>Información</mat-card-title>
+                <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
+            </mat-card-header>
     
-    <mat-card class="col-12 sm:col-6">
-        <mat-card-header>
-            <mat-card-title>Información</mat-card-title>
-            <mat-card-subtitle>{{ hero.superhero }}</mat-card-subtitle>
-        </mat-card-header>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item>Primera Aparición: {{ hero.first_appearance }}</mat-list-item>
+                    <mat-list-item>Personajes: {{ hero.characters }}</mat-list-item>
+                    <mat-list-item>Creador: {{ hero.publisher }}</mat-list-item>
+                    <mat-list-item>Alter Ego: {{ hero.alter_ego }}</mat-list-item>
+                </mat-list>
+    
+                <button mat-button color="warn" (click)="goBack()">Regresar</button>
+            </mat-card-content>
+            <img [src]="hero | heroImage" [alt]="hero.superhero" mat-card-image>
+        </mat-card>
+    </div>
 
-        <mat-card-content>
-            <mat-list>
-                <mat-list-item>{{ hero.first_appearance }}</mat-list-item>
-                <mat-list-item>{{ hero.characters }}</mat-list-item>
-                <mat-list-item>{{ hero.publisher }}</mat-list-item>
-                <mat-list-item>{{ hero.alter_ego }}</mat-list-item>
-            </mat-list>
-
-            <button mat-button color="warn" (click)="goBack()">Regresar</button>
-        </mat-card-content>
-        <img [src]="hero | heroImage" [alt]="hero.superhero" mat-card-image>
-    </mat-card>
 </div>
