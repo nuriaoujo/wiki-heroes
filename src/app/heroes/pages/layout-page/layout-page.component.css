@@ -84,12 +84,12 @@ mat-sidenav img {
 /* Text & Text Sidebar Elements */
 .font-general {
     font-family: "Fugaz One", sans-serif;
-    font-size: 1.6rem !important;
+    font-size: 1.3rem !important;
 }
 
 .title-font {
     font-family: "Fugaz One", sans-serif !important;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 2rem 0;
 }
 
