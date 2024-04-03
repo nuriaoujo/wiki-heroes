@@ -85,6 +85,12 @@ button.btn .mat-icon {
     background: linear-gradient(295deg, rgba(33,25,81,1) 76%, rgb(51, 38, 126) 100%);   
 }
 
+.background-2 {
+    height: 100vh;
+    background: rgb(33,25,81);
+    background: linear-gradient(295deg, rgba(33,25,81,1) 76%, rgb(51, 38, 126) 100%);   
+}
+
 #background-video {
     width: 100vw;
     height: 100vh;

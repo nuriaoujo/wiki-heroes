@@ -7,7 +7,7 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 @Component({
   selector: 'app-search-page',
   templateUrl: './search-page.component.html',
-  styles: ``
+  styleUrl: './../list-page/list-page.component.css'
 })
 export class SearchPageComponent {
 

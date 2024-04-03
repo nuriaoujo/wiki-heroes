@@ -6,6 +6,10 @@
     text-transform: uppercase;
 }
 
+.style-searchbox {
+    transition: all 0.7s;
+}
+
 @media (max-width: 590px) {
     .title-hero-page {
         font-size: 1.7rem;
