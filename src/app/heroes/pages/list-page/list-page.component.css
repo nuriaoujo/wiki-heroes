@@ -1,3 +1,4 @@
+/* Title Pages */
 .title-hero-page {
     color: #F0F3FF;
     /* color: #15F5BA; */
@@ -6,12 +7,61 @@
     text-transform: uppercase;
 }
 
-.style-searchbox {
-    transition: all 0.7s;
+@media (max-width: 590px) {
+    .title-hero-page { font-size: 1.7rem; }
 }
 
-@media (max-width: 590px) {
-    .title-hero-page {
-        font-size: 1.7rem;
-    }
+/* Search Page */
+.fa-solid {
+    color: #836FFF;
+    font-size: 1.1rem;
+    margin-right: 1.5rem;
+}
+
+mat-label span { color: #836FFF; }
+
+.style-searchbox input { color: #211951 !important; }
+
+.style-searchbox { max-width: 900px; display: inline; text-align: center; }
+
+/* New & Edit Page */
+
+.mat-card-content-form {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+}
+
+.mat-card-form {
+    display: block;
+    margin: auto;
+    width: 90vw;
+    max-width: 1200px;
+    max-height: 700px;
+    border: 2px solid #15f5b9cd;
+    transition: all 0.7s;
+    background-color: #826fff25;;
+}
+
+.mat-card-img {
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    height: 400px;
+    width: 400px;
+    border: 2px solid #15F5BA;
+    border-radius: 9px !important;
+}
+
+.mat-card-form:hover { border: 2px solid #15F5BA; box-shadow: 0px 0px 12px #15f5b993;}
+
+mat-form-field mat-label,
+mat-form-field mat-select,
+mat-form-field input {
+    border: #F0F3FF !important;
+    color: #F0F3FF !important;
+}
+
+mat-form-field:focus-visible input {
+    box-shadow: 0px 0px 12px #15F5BA !important;
 }

@@ -86,7 +86,7 @@ button.btn .mat-icon {
 }
 
 .background-2 {
-    height: 100vh;
+    height: 95.5vh;
     background: rgb(33,25,81);
     background: linear-gradient(295deg, rgba(33,25,81,1) 76%, rgb(51, 38, 126) 100%);   
 }
@@ -136,5 +136,5 @@ button.btn .mat-icon {
     
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #211951;
+    background: #826fffbb;
 }
