@@ -1,22 +1,51 @@
 .card-border {
-    border: 2px solid #15F5BA;
+    border: 2px solid #15f5b9b4;
     background-color: #826fff25;
     color: #F0F3FF;
+    
+    transition: all 0.5s;
+}
+
+.card-border:hover {
+    border: 2px solid #15F5BA;
+    box-shadow: 0px 0px 12px #15f5b95e;
 }
 
 .chip-style {
     background-color: #836FFF !important;
 }
 
-img {
+.container-img {
     border: 2px solid #15F5BA;
-    margin: 1rem 0;
-    height: 350px;
     border-radius: 2%;
+    height: 350px;
+    margin: 1rem 0;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 100%;
+}
+
+img {
+    position: relative;
+    height: 350px;
+    width: 100%;
     object-fit: cover;
     object-position: 0% 0%;
+    top: 0;
+    transition: 0.5s all ease-in-out;
+}
+
+.card-border:hover .container-img img {
+    transform: scale(1.2);
 }
 
 mat-card-subtitle {
     color: #F0F3FF;
+    margin-bottom: 1rem;
 }
+
+mat-card-title {
+    font-family: "Fugaz One", sans-serif;
+    text-transform: uppercase;
+}
+
