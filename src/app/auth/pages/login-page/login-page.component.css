@@ -1,28 +1,42 @@
 /* Login & Register Page */
 mat-card {
-    margin-top: 10rem;
     padding: 30px;
     max-width: 600px;
+    background-color: #211951dd;
+    border: 2px solid #15f5b9a0;
+    transform: scale(1.2) !important;
 }
 
 mat-card-content {
     width: 350px;
 }
 
-/* Layout Page */
-.title-layout {
+mat-card-content span {
     color: #F0F3FF;
-    text-align: center;
-    width: 100%;
-    padding-top: 3.5rem;
-    font-size: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: "Fugaz One", sans-serif;
-    filter: drop-shadow(4px 4px 4px #0000004b);
-    font-weight: 100;
+    text-transform: uppercase;
+    
+}
+
+/* Layout Page */
+.fixed {
+    z-index: 1;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.title-layout {
+    transform: scale(1.2) !important;
+    align-items: center;
+    color: #F0F3FF;
     cursor: default;
+    display: flex;
+    margin-bottom: 100px;
+    filter: drop-shadow(4px 4px 4px #0000004b);
+    font-family: "Fugaz One", sans-serif;
+    font-size: 2.5rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .title-layout p {
@@ -40,3 +54,6 @@ mat-card-content {
 .title-layout img {
     height: 4.5rem;
 }
+
+
+

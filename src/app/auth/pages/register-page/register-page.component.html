@@ -3,29 +3,35 @@
         <mat-card-content>
             <div class="flex flex-column">
                 <span class="text-lg text-center mb-4">Regístrate</span>
+
+                <input type="text" class="input-style" placeholder="Nombre de Usuario">
             
-                <mat-form-field appearance="outline">
+                <!-- <mat-form-field appearance="outline">
                     <mat-label>Usuario</mat-label>
                     <input type="text" matInput placeholder="Nombre de Usuario">
-                </mat-form-field>
+                </mat-form-field> -->
+
+                <input type="text" class="input-style" placeholder="Nombre">
             
-                <mat-form-field appearance="outline">
+                <!-- <mat-form-field appearance="outline">
                     <mat-label>Nombre</mat-label>
                     <input type="text" matInput placeholder="Nombre">
-                </mat-form-field>
+                </mat-form-field> -->
+
+                <input type="password" class="input-style" placeholder="Contraseña">
             
-                <mat-form-field appearance="outline">
+                <!-- <mat-form-field appearance="outline">
                     <mat-label>Contraseña</mat-label>
                     <input type="password" matInput placeholder="Contraseña">
-                </mat-form-field>
+                </mat-form-field> -->
             
-                <button class="btn btn-secondary">
+                <button class="btn btn-main">
                     <mat-icon>person</mat-icon>
                     Registrarse
                 </button>
             
                 <div class="flex justify-content-end mt-5">
-                    <a routerLink="/auth/login">¿Ya tienes cuenta?</a>
+                    <a routerLink="/auth/login" class="account-link">¿Ya tienes cuenta?</a>
                 </div>
             </div>
         </mat-card-content>

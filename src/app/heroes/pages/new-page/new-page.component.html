@@ -13,47 +13,78 @@
                 <mat-card-content class="mat-card-content-form">
                     <div class="container">
                         <form class="grid m-1" [formGroup]="heroForm" (ngSubmit)="onSubmit()">
-                            <mat-form-field appearance="outline" class="col-12 sm:col-6">
+
+                            <input
+                                type="text"
+                                class="col-12 sm:col-6 input-style "
+                                placeholder="Super Héroe*"
+                                formControlName="superhero"
+                                required
+                            >
+                            <!-- <mat-form-field appearance="outline" class="col-12 sm:col-6">
                                 <mat-label>Super Héroe</mat-label>
                                 <input
                                     matInput
                                     type="text"
                                     required
                                     formControlName="superhero">
-                            </mat-form-field>
+                            </mat-form-field> -->
 
-                            <mat-form-field appearance="outline" class="col-12 sm:col-6">
+                            <input
+                                type="text"
+                                class="col-12 sm:col-6 input-style"
+                                placeholder="Alter Ego*"
+                                formControlName="alter_ego"
+                                required
+                            >
+
+                            <!-- <mat-form-field appearance="outline" class="col-12 sm:col-6">
                                 <mat-label>Alter Ego</mat-label>
                                 <input
                                     matInput
                                     type="text"
                                     required
                                     formControlName="alter_ego">
-                            </mat-form-field>
+                            </mat-form-field> -->
+
+                            <input
+                                type="text"
+                                class="input-style col-12"
+                                placeholder="Primera Aparición*"
+                                formControlName="first_appearance"
+                                required
+                            >
         
-                            <mat-form-field appearance="outline" class="col-12">
+                            <!-- <mat-form-field appearance="outline" class="col-12">
                                 <mat-label>Primera Aparición</mat-label>
                                 <input
                                     matInput
                                     type="text"
                                     required
                                     formControlName="first_appearance">
-                            </mat-form-field>
+                            </mat-form-field> -->
+
+                            <input
+                                type="text"
+                                class="input-style col-12"
+                                placeholder="Personajes*"
+                                formControlName="characters"
+                                required
+                            >
         
-                            <mat-form-field appearance="outline" class="col-12">
+                            <!-- <mat-form-field appearance="outline" class="col-12">
                                 <mat-label>Personajes</mat-label>
                                 <input
                                     matInput
                                     type="text"
                                     required
                                     formControlName="characters">
-                            </mat-form-field>
-        
-                            <mat-form-field appearance="outline" class="col-12">
-                                <mat-label>Creador</mat-label>
+                            </mat-form-field> -->
+
+                            <mat-form-field class="w-full">
                                 <mat-select
                                     formControlName="publisher"
-                                    required>
+                                    required class="option-style">
                                     <mat-option
                                         *ngFor="let publisher of publishers"
                                         [value]="publisher.id"
@@ -63,14 +94,23 @@
                                 </mat-select>
                             </mat-form-field>
     
-                            <mat-form-field appearance="outline" class="col-12">
+                            <input
+                                type="text"
+                                class="input-style col-12"
+                                placeholder="Alternative Image*"
+                                formControlName="alt_img"
+                                required
+                            >
+
+                            <!-- <mat-form-field appearance="outline" class="col-12">
                                 <mat-label>Alternative Image</mat-label>
                                 <input
                                     matInput
                                     type="text"
                                     required
                                     formControlName="alt_img">
-                            </mat-form-field>
+                            </mat-form-field> -->
+
                         </form>
         
                         <div class="flex justify-content-end flex-wrap mr-2">
@@ -93,7 +133,7 @@
                     </div>
 
                     <div class="col-12 sm:col-6">
-                        <img class="mat-card-img" [src]="currentHero | heroImage" alt="imagen del héroe" mat-card-image>
+                        <img class="mat-card-img" [src]="currentHero | heroImage" alt="imagen del héroe">
                     </div>
     
                 </mat-card-content>

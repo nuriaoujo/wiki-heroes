@@ -1,3 +1,4 @@
+/* Card Component */
 .card-border {
     border: 2px solid #15f5b9b4;
     background-color: #826fff25;
@@ -49,3 +50,19 @@ mat-card-title {
     text-transform: uppercase;
 }
 
+/* Dialog Component */
+.background-dialog {
+    background: rgb(49, 37, 121);
+    border: 2px solid #15f5b9b4;
+    border-radius: 5px;
+}
+
+.background-dialog h2 {
+    color: #F0F3FF;
+    font-family: "Fugaz One", sans-serif;
+    text-transform: uppercase;
+}
+
+.background-dialog mat-dialog-content p {
+    color: #F0F3FF;
+}

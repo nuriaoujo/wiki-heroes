@@ -1,18 +1,21 @@
-<div class="fixed title-layout">
-    <img src="./../../../../assets/logo.png" alt="Logo">
-    <p>
-        Superpedia,
-        <br>
-        <small>T<span>us héroes online</span></small>
-    </p>
-
-</div>
-<div class="background-login">
-    <video id="background-video" autoplay loop muted>
-        <!-- Video created by Pachon in Motion -->
-        <source src="../../../../assets/background-video.mp4" type="video/mp4">
-      </video>
-    <div class="flex flex-1 justify-content-center">
+<div class="fixed">
+    <div class="title-layout">
+        <p>
+            Superpedia,
+            <br>
+            <small>T<span>us héroes online</span></small>
+        </p>
+        <img src="./../../../../assets/logo.png" alt="Logo">
+    </div>
+    <div>
         <router-outlet></router-outlet>
     </div>
+
+</div>
+
+<div class="background-login-layer"></div>
+<div class="background-login">
+    <video id="background-video" autoplay loop muted>
+        <source src="../../../../assets/background-video.mp4" type="video/mp4">
+      </video>
 </div>

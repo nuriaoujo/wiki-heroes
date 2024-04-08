@@ -5,7 +5,7 @@ import { Hero } from '../../interfaces/hero.interface';
 @Component({
   selector: 'app-confirm-dialog',
   templateUrl: './confirm-dialog.component.html',
-  styles: ``
+  styleUrl: './../style-components.css'
 })
 export class ConfirmDialogComponent {
 

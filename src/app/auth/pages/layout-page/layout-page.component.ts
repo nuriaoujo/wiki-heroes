@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-layout-page',
@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './../login-page/login-page.component.css'
 })
 export class LayoutPageComponent {
-
 }
